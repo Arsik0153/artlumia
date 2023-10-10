@@ -1,15 +1,18 @@
 {
-  "name": "astro-testing",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^3.2.3"
-  }
+    "name": "artlumia",
+    "type": "module",
+    "version": "0.0.1",
+    "license": "MIT",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "astro": "^3.2.3",
+        "astro-icon": "^0.8.1",
+        "typescript": "^5.2.2"
+    }
 }

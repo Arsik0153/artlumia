@@ -1,0 +1,118 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon";
+import logo from "../icons/logo.svg";
+---
+
+<div class="fluid">
+    <div class="container">
+        <header>
+            <div class="left">
+                <button type="button" class="menu-btn">Menu</button>
+            </div>
+            <div class="center">
+                <Image src={logo} alt="ARTLUMIA" />
+            </div>
+            <div class="right">
+                <Icon name="inst" class="social" />
+                <Icon name="vimeo" class="social" />
+                <Icon name="linkedin" class="social" />
+            </div>
+        </header>
+        <div class="content">
+            <div class="title">
+                <div class="line"></div>
+                <Icon name="hero-title" class="hero-title" />
+            </div>
+            <div class="order">
+                <button type="button">Order a video</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .fluid {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding-top: 40px;
+    }
+
+    .fluid .container {
+        min-height: calc(100vh - 188px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-btn {
+        text-transform: uppercase;
+        border: none;
+        background: transparent;
+        font-family: Poppins;
+        font-size: 14px;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 9px 30px;
+        cursor: pointer;
+    }
+
+    .logo {
+        width: 141px;
+        height: 27px;
+    }
+
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social {
+        width: 24px;
+        height: 24px;
+    }
+
+    .right {
+        display: flex;
+        gap: 20px;
+    }
+
+    .content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 70% 1fr;
+        margin-bottom: 140px;
+    }
+
+    .content .line {
+        max-width: 273px;
+        width: 100%;
+        background: #fff;
+        height: 1px;
+        margin-bottom: 30px;
+    }
+
+    .order {
+        margin-left: auto;
+    }
+
+    .order button {
+        width: 241px;
+        height: 241px;
+        border: none;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="241" height="241" viewBox="0 0 241 241" fill="none"><circle cx="120.5" cy="120.5" r="119.5" stroke="white" stroke-width="2" stroke-dasharray="14 14"/></svg>');
+        font-family: Poppins;
+        font-weight: 700;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 100%;
+    }
+</style>
