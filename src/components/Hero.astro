@@ -25,6 +25,21 @@ import logo from "../icons/logo.svg";
                 <Icon name="hero-title" class="hero-title" />
             </div>
             <div class="order">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="241"
+                    height="241"
+                    viewBox="0 0 241 241"
+                    fill="none"
+                >
+                    <circle
+                        cx="120.5"
+                        cy="120.5"
+                        r="119.5"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-dasharray="14 14"></circle>
+                </svg>
                 <button type="button">Order a video</button>
             </div>
         </div>
@@ -102,17 +117,51 @@ import logo from "../icons/logo.svg";
 
     .order {
         margin-left: auto;
+        z-index: 3;
+        position: relative;
+        width: 241px;
+        height: 241px;
+        border-radius: 100%;
+        overflow: hidden;
+        cursor: pointer;
     }
 
     .order button {
-        width: 241px;
-        height: 241px;
+        width: 100%;
+        height: 100%;
         border: none;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="241" height="241" viewBox="0 0 241 241" fill="none"><circle cx="120.5" cy="120.5" r="119.5" stroke="white" stroke-width="2" stroke-dasharray="14 14"/></svg>');
+        border-radius: 100%;
+        padding: 0;
         font-family: Poppins;
         font-weight: 700;
         color: #fff;
-        cursor: pointer;
+        transition: background 0.1s ease;
+        background: transparent;
+        z-index: 2;
+    }
+
+    .order svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.1s;
         border-radius: 100%;
+    }
+
+    .order svg circle {
+        stroke: white;
+        stroke-width: 2;
+        stroke-dasharray: 14 14;
+        fill: none;
+        transition: all 0.3s;
+    }
+
+    /* When .order div is hovered, change the stroke-dasharray to 0 0 */
+    .order:hover svg circle {
+        stroke-dasharray: 80 0;
+        transition: all 0.3s;
     }
 </style>
