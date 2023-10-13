@@ -1,0 +1,205 @@
+---
+import { Image } from "astro:assets";
+
+import PromotionsOptomised from "../videos/Promotions-Optomised.gif";
+import Promotions from "../videos/Promotions.gif";
+
+import CGI from "../videos/CGI.gif";
+
+import VideoTV from "../videos/VideoTV.gif";
+import VideoTvOptimised from "../videos/VideoTvOptimised.gif";
+
+import ReelsOptimised from "../videos/Reels-Optimised.gif";
+import ReelsHardOptimised from "../videos/ReelsHardOptimised.gif";
+import Reels from "../videos/Reels.gif";
+---
+
+<div class="fluid">
+    <div class="container">
+        <p class="p700-120"><span class="c593FBF">//</span>services</p>
+        <div class="grid-container">
+            <div class="item1">
+                <Image
+                    class="gif"
+                    src={PromotionsOptomised}
+                    alt="Videos for online promotions"
+                />
+                <p class="p700-24">Videos for online promotions</p>
+            </div>
+            <div class="item2">
+                <Image class="gif2" src={VideoTvOptimised} alt="Videos for TV" />
+                <p class="p700-24 mt15">Videos for TV</p>
+            </div>
+            <div class="item3">
+                <Image class="gif3" src={CGI} alt="Video/CGI/VFX production" />
+                <p class="p700-24">Video/CGI/VFX production</p>
+            </div>
+            <div class="item4">
+                <Image
+                    class="gif"
+                    src={ReelsOptimised}
+                    alt="Reels/TikTok/Shorts videos"
+                />
+                <p class="p700-24">Reels/TikTok/<br />Shorts videos</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .fluid {
+        width: 100%;
+        background: #07141E;
+        color: white;
+        padding-top: 40px;
+        font-family: ActayWide;
+    }
+
+    .fluid .container {
+        padding: 81px 90px 82px 89px;
+        display: flex;
+        flex-direction: column;
+        background-color: #0b0b0b;
+    }
+
+    .p700-120 {
+        color: #fff;
+
+        font-size: 120px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    .c593FBF {
+        color: #593fbf;
+    }
+    .p700-24 {
+        color: #fff;
+        font-size: 24px;
+        margin: 26px 0 0;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 170%;
+        text-transform: uppercase;
+    }
+    .mt15 {
+        margin-top: 15px;
+    }
+    .grid-container {
+        display: grid;
+        margin-top: 25px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 25px;
+        height: 626px;
+    }
+
+    .item1 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+    }
+
+    .item2 {
+        grid-column: 2;
+        grid-row: 1 / span 1;
+    }
+
+    .item3 {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .item4 {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 2;
+    }
+
+    .gif {
+        object-fit: cover;
+        width: 100%;
+        height: calc(100% - 100px);
+        background-color: rgb(6, 145, 45);
+    }
+    .gif2 {
+        object-fit: cover;
+
+        width: 100%;
+        height: calc(100% - 46px);
+        background-color: rgb(171, 45, 4);
+    }
+    .gif3 {
+        object-fit: cover;
+
+        width: 100%;
+        height: calc(100% - 100px);
+        background: #0b0b0b;
+    }
+
+
+/*
+           _             _   _
+  __ _  __| | __ _ _ __ | |_(_)_   _____
+ / _` |/ _` |/ _` | '_ \| __| \ \ / / _ \
+| (_| | (_| | (_| | |_) | |_| |\ V /  __/
+ \__,_|\__,_|\__,_| .__/ \__|_| \_/ \___|
+                  |_|
+*/
+
+
+    @media screen and (max-width: 450px) {
+        .fluid .container {
+            margin: 0 15px 0 15px;
+            padding: 52px 30px 53px 30px;
+            display: flex;
+            flex-direction: column;
+            background: #0b0b0b;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: none;
+            grid-template-rows: none;
+            grid-template-areas:
+                "item1"
+                "item2"
+                "item3"
+                "item4";
+            height: auto;
+        }
+
+        .item1 {
+            grid-area: item1;
+        }
+        .item2 {
+            height: auto;
+            grid-area: item2;
+        }
+        .item3 {
+            height: auto;
+            grid-area: item3;
+        }
+        .item4 {
+            height: auto;
+            grid-area: item4;
+        }
+        .gif2 {
+            object-fit: contain;
+            width: 100%;
+            height: auto;
+            background-color: rgb(171, 45, 4);
+        }
+        .gif3 {
+            object-fit: contain;
+            height: auto;
+            width: 100%;
+            background: #0b0b0b;
+        }
+        .p700-120 {
+            font-size: 32px;
+        }
+        .p700-24 {
+            font-size: 20px;
+        }
+    }
+</style>
