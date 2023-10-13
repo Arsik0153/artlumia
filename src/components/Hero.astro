@@ -10,21 +10,30 @@ import Menu from "./Menu.astro";
     <div class="container">
         <header>
             <div class="left">
-                <button type="button" class="menu-btn">Menu</button>
+                <button type="button" class="menu-btn" id="menu-btn"
+                    >Menu</button
+                >
             </div>
             <div class="center">
                 <Image src={logo} alt="ARTLUMIA" />
             </div>
             <div class="right">
-                <Icon name="inst" class="social" />
-                <Icon name="vimeo" class="social" />
-                <Icon name="linkedin" class="social" />
+                <a href="" target="_blank">
+                    <Icon name="inst" class="social" />
+                </a>
+                <a href="" target="_blank">
+                    <Icon name="vimeo" class="social" />
+                </a>
+                <a href="" target="_blank">
+                    <Icon name="linkedin" class="social" />
+                </a>
             </div>
         </header>
         <div class="content">
             <div class="title">
                 <div class="line"></div>
                 <Icon name="hero-title" class="hero-title" />
+                <Icon name="hero-title-sm" class="hero-title-sm" />
             </div>
             <button class="order" type="button">
                 <svg
@@ -187,5 +196,35 @@ import Menu from "./Menu.astro";
     }
     .order:focus svg {
         opacity: 0.2;
+    }
+
+    .hero-title-sm {
+        display: none;
+    }
+
+    @media screen and (max-width: 450px) {
+        .content {
+            grid-template-columns: 1fr;
+            margin-bottom: 25px;
+        }
+        .order {
+            width: 146px;
+            height: 146px;
+        }
+        .content .line {
+            max-width: 174px;
+        }
+        .hero-title {
+            display: none;
+        }
+        .hero-title-sm {
+            display: block;
+        }
+        header .right {
+            display: none;
+        }
+        header {
+            flex-direction: row-reverse;
+        }
     }
 </style>
