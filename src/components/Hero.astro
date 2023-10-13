@@ -2,8 +2,10 @@
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
 import logo from "../icons/logo.svg";
+import Menu from "./Menu.astro";
 ---
 
+<Menu />
 <div class="fluid">
     <div class="container">
         <header>
@@ -24,7 +26,7 @@ import logo from "../icons/logo.svg";
                 <div class="line"></div>
                 <Icon name="hero-title" class="hero-title" />
             </div>
-            <div class="order">
+            <button class="order" type="button">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="241"
@@ -40,18 +42,22 @@ import logo from "../icons/logo.svg";
                         stroke-width="2"
                         stroke-dasharray="14 14"></circle>
                 </svg>
-                <button type="button">Order a video</button>
-            </div>
+                <div>Order a video</div>
+            </button>
         </div>
     </div>
+    <video id="background-video" autoplay loop muted poster="/videos/hero.mp4">
+        <source src="/videos/hero.mp4" type="video/mp4" />
+    </video>
 </div>
 
 <style>
     .fluid {
         width: 100%;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.3);
         color: white;
         padding-top: 40px;
+        position: relative;
     }
 
     .fluid .container {
@@ -59,6 +65,16 @@ import logo from "../icons/logo.svg";
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .fluid video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
     }
 
     header {
@@ -124,11 +140,8 @@ import logo from "../icons/logo.svg";
         border-radius: 100%;
         overflow: hidden;
         cursor: pointer;
-    }
-
-    .order button {
-        width: 100%;
-        height: 100%;
+        border: none;
+        background: transparent;
         border: none;
         border-radius: 100%;
         padding: 0;
@@ -159,9 +172,20 @@ import logo from "../icons/logo.svg";
         transition: all 0.3s;
     }
 
-    /* When .order div is hovered, change the stroke-dasharray to 0 0 */
+    .order:focus svg circle,
     .order:hover svg circle {
         stroke-dasharray: 80 0;
         transition: all 0.3s;
+    }
+    .order:hover {
+        background: rgba(255, 255, 255, 0.13);
+    }
+
+    .order:focus {
+        background: rgba(147, 138, 255, 0.2);
+        transition: all 0.3s;
+    }
+    .order:focus svg {
+        opacity: 0.2;
     }
 </style>
