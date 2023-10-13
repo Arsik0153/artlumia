@@ -1,8 +1,4 @@
----
-import { Image } from "astro:assets";
 
-import StagesGif from "../videos/StagesGif.gif";
----
 
 <div class="fluid">
     <div class="container">
@@ -48,8 +44,19 @@ import StagesGif from "../videos/StagesGif.gif";
                 
             </div>
             <div class="item5">
-                <Image class="gif" src={StagesGif} alt="StagesGif" />
-            </div>
+                <video
+                class="gif"
+                id="background-video"
+                autoplay
+                loop
+                muted
+                poster="../public/videots/Stages.mp4"
+            >
+                <source
+                    src="../public/videos/Stages.mp4"
+                    type="video/mp4"
+                />
+            </video>            </div>
         </div>
 
         <div class="underDiv">
@@ -72,6 +79,7 @@ import StagesGif from "../videos/StagesGif.gif";
         color: white;
         padding-top: 40px;
         font-family: ActayWide;
+        background-image: url('../img/noise.png');
     }
 
     .fluid .container {
