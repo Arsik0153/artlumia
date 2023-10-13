@@ -39,3 +39,24 @@
     font-style: italic;
     font-weight: 100;
 }
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Black.ttf') format('opentype');
+    font-style: normal;
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Regular.ttf') format('opentype');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Light.ttf') format('opentype');
+    font-style: light;
+    font-weight: 300;
+}
+
