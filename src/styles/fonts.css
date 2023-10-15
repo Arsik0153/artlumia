@@ -3,6 +3,7 @@
     src: url('/fonts/Actay-Regular.otf') format('opentype');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
     src: url('/fonts/Actay-RegularItalic.otf') format('opentype');
     font-style: italic;
     font-weight: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -17,6 +19,7 @@
     src: url('/fonts/ActayWide-Bold.otf') format('opentype');
     font-style: normal;
     font-weight: bold;
+    font-display: swap;
 }
 
 @font-face {
@@ -24,6 +27,7 @@
     src: url('/fonts/ActayWide-BoldItalic.otf') format('opentype');
     font-style: italic;
     font-weight: bold;
+    font-display: swap;
 }
 
 @font-face {
@@ -31,6 +35,7 @@
     src: url('/fonts/ActayCondensed-Thin.otf') format('opentype');
     font-style: normal;
     font-weight: 100;
+    font-display: swap;
 }
 
 @font-face {
@@ -38,25 +43,5 @@
     src: url('/fonts/ActayCondensed-ThinItalic.otf') format('opentype');
     font-style: italic;
     font-weight: 100;
+    font-display: swap;
 }
-
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-Black.ttf') format('opentype');
-    font-style: normal;
-    font-weight: 900;
-}
-@font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-Regular.ttf') format('opentype');
-    font-style: normal;
-    font-weight: 400;
-}
-@font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-Light.ttf') format('opentype');
-    font-style: light;
-    font-weight: 300;
-}
-
