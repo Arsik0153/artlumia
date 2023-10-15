@@ -23,7 +23,7 @@ const links = [
 
 <div class="wrapper" id="menu-wrapper" data-visible="false">
     <div class="container">
-        <button id="menu-close">
+        <button id="menu-close" type="button" aria-label="Close menu">
             <Icon name="close" />
         </button>
         <div class="links">
@@ -37,6 +37,7 @@ const links = [
                                     animationDelay: `${index * 0.1 + 0.1}s`,
                                 }}
                                 href={link.link}
+                                aria-label={link.label}
                             >
                                 {link.label}
                             </a>
@@ -45,14 +46,14 @@ const links = [
                 ))
             }
             <div class="socials">
-                <a href="" target="_blank">
-                    <Icon name="inst" class="social" />
+                <a href="" target="_blank" aria-label="Instagram icon">
+                    <Icon name="inst" class="social" alt="Instagram icon" />
                 </a>
-                <a href="" target="_blank">
-                    <Icon name="vimeo" class="social" />
+                <a href="" target="_blank" aria-label="Vimeo icon">
+                    <Icon name="vimeo" class="social" alt="Vimeo icon" />
                 </a>
-                <a href="" target="_blank">
-                    <Icon name="linkedin" class="social" />
+                <a href="" target="_blank" aria-label="LinkedIn icon">
+                    <Icon name="linkedin" class="social" alt="LinkedIn icon" />
                 </a>
             </div>
         </div>
