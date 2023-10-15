@@ -6,10 +6,10 @@ import Stages from "../components/Stages.astro";
 import LandingLayout from "../layouts/LandingLayout.astro";
 ---
 
-<LandingLayout title="Welcome to Astro.">
-    <Hero />
-    <Services />
-    <Stages />
+<LandingLayout title="ARTLUMIA">
+    <Hero client:visible />
+    <Services client:visible />
+    <Stages client:visible />
 </LandingLayout>
 
 <style>
@@ -18,3 +18,38 @@ import LandingLayout from "../layouts/LandingLayout.astro";
         font-family: "Poppins";
     }
 </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let lazyVideos = [...document.querySelectorAll("video.lazy")];
+
+        if ("IntersectionObserver" in window) {
+            let lazyVideoObserver = new IntersectionObserver(function (
+                entries
+            ) {
+                entries.forEach(function (video) {
+                    if (video.isIntersecting) {
+                        console.log("INTERSECTED", video);
+                        for (let source in video.target.children) {
+                            let videoSource = video.target.children[source];
+                            if (
+                                typeof videoSource.tagName === "string" &&
+                                videoSource.tagName === "SOURCE"
+                            ) {
+                                videoSource.src = videoSource.dataset.src;
+                            }
+                        }
+
+                        video.target.load();
+                        video.target.classList.remove("lazy");
+                        lazyVideoObserver.unobserve(video.target);
+                    }
+                });
+            });
+
+            lazyVideos.forEach(function (lazyVideo) {
+                lazyVideoObserver.observe(lazyVideo);
+            });
+        }
+    });
+</script>
