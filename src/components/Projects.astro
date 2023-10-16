@@ -87,11 +87,10 @@ import eye from "../icons/eye.svg";
                     <video
                         class="gif lazy"
                         id="background-video"
-                        controls
+                        autoplay
                         loop
                         muted
                         playsinline
-                        preload="none"
                     >
                         <source
                             data-src="/videos/projects/Kodezi.mp4"
@@ -105,7 +104,7 @@ import eye from "../icons/eye.svg";
                     <video
                         class="gif lazy"
                         id="background-video"
-                        controls
+                        autoplay
                         loop
                         muted
                         playsinline
@@ -127,7 +126,7 @@ import eye from "../icons/eye.svg";
                         muted
                         playsinline
                         preload="none"
-                        controls
+                        autoplay
                     >
                         <source
                             data-src="/videos/projects/Giftpack.mp4"
@@ -137,27 +136,26 @@ import eye from "../icons/eye.svg";
                     </video>
                     <p class="p700-24">Giftpack</p>
                 </div>
-                    <div class="client">
-                        <video
-                            class="gif lazy"
-                            id="background-video"
-                            loop
-                            muted
-                            playsinline
-                            preload="none"
-                            controls
-                        >
-                            <source
-                                data-src="/videos/projects/Ai-Ui.mp4"
-                                class="lazy"
-                                type="video/mp4"
-                            />
-                        </video>
-                        <p class="p700-24">Ai UI</p>
-                    </div>
+                <div class="client">
+                    <video
+                        class="gif lazy"
+                        id="background-video"
+                        loop
+                        muted
+                        playsinline
+                        preload="none"
+                        autoplay
+                    >
+                        <source
+                            data-src="/videos/projects/Ai-Ui.mp4"
+                            class="lazy"
+                            type="video/mp4"
+                        />
+                    </video>
+                    <p class="p700-24">Ai UI</p>
+                </div>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -177,7 +175,7 @@ import eye from "../icons/eye.svg";
         align-items: center;
         padding-bottom: 100px;
     }
-    .views-box{
+    .views-box {
         width: 100%;
     }
     .p700-100 {
@@ -224,7 +222,6 @@ import eye from "../icons/eye.svg";
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: auto;
         gap: 20px;
-        
     }
     .p700-24 {
         color: #fff;
@@ -236,26 +233,26 @@ import eye from "../icons/eye.svg";
         margin: 17px 0 0;
     }
     @media screen and (max-width: 450px) {
-        .fluid{
+        .fluid {
             padding-top: 10px;
         }
-        .p700-100{
+        .p700-100 {
             font-size: 32px;
             margin: 0 0 15px;
         }
-        .p700-52{
+        .p700-52 {
             font-size: 14px;
             margin: 18px 0 34px 0;
         }
-        .p700-24{
+        .p700-24 {
             font-size: 14px;
             margin: 4px 0 4px 0;
         }
-        .svg-eye{
+        .svg-eye {
             width: 14px;
             height: 14px;
         }
-        .project-box{
+        .project-box {
             padding-top: 70px;
             padding-bottom: 0;
         }
@@ -263,11 +260,9 @@ import eye from "../icons/eye.svg";
             gap: 4px;
         }
         .gif {
-        object-fit: cover;
-        width: 100%;
-        aspect-ratio: 16 / 12;
+            object-fit: cover;
+            width: 100%;
+            aspect-ratio: 16 / 12;
+        }
     }
-    }
-    
-
 </style>
