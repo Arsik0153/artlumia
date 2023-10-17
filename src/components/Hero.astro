@@ -33,7 +33,7 @@ import Menu from "./Menu.astro";
         <Icon name="hero-title" class="hero-title" />
         <Icon name="hero-title-sm" class="hero-title-sm" />
       </div>
-      <button class="order" type="button">
+      <button class="order" type="button" id="order-btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="241"
@@ -226,3 +226,16 @@ import Menu from "./Menu.astro";
     }
   }
 </style>
+
+<script>
+  const link = document.querySelector("#order-btn");
+
+  link?.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetSection = document.getElementById("order");
+    console.log("targetSection", targetSection);
+
+    // Scroll to the target section smoothly
+    targetSection?.scrollIntoView({ behavior: "smooth" });
+  });
+</script>
