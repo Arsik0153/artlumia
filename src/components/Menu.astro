@@ -2,234 +2,235 @@
 import Icon from "astro-icon";
 
 const links = [
-  {
-    label: "our projects",
-    link: "#projects",
-  },
-  {
-    label: "services",
-    link: "#services",
-  },
-  {
-    label: "stages of worK",
-    link: "#stages",
-  },
-  {
-    label: "order a video",
-    link: "#order",
-  },
+    {
+        label: "our projects",
+        link: "#projects",
+    },
+    {
+        label: "services",
+        link: "#services",
+    },
+    {
+        label: "stages of worK",
+        link: "#stages",
+    },
+    {
+        label: "order a video",
+        link: "#order",
+    },
 ];
 ---
 
 <div class="wrapper" id="menu-wrapper" data-visible="false">
-  <div class="container">
-    <button id="menu-close" type="button" aria-label="Close menu">
-      <Icon name="close" />
-    </button>
-    <div class="links">
-      {
-        links.map((link, index) => (
-          <div class="link">
-            <span class="slash">// </span>
-            <div class="link-mask">
-              <a
-                style={{
-                  animationDelay: `${index * 0.1 + 0.1}s`,
-                }}
-                href={link.link}
-                aria-label={link.label}
-              >
-                {link.label}
-              </a>
+    <div class="container">
+        <button id="menu-close" type="button" aria-label="Close menu">
+            <Icon name="close" />
+        </button>
+        <div class="links">
+            {
+                links.map((link, index) => (
+                    <div class="link">
+                        <span class="slash">// </span>
+                        <div class="link-mask">
+                            <a
+                                style={{
+                                    animationDelay: `${index * 0.1 + 0.1}s`,
+                                }}
+                                href={link.link}
+                                aria-label={link.label}
+                            >
+                                {link.label}
+                            </a>
+                        </div>
+                    </div>
+                ))
+            }
+            <div class="socials">
+                <a href="" target="_blank" aria-label="Instagram icon">
+                    <Icon name="inst" class="social" alt="Instagram icon" />
+                </a>
+                <a href="" target="_blank" aria-label="Vimeo icon">
+                    <Icon name="vimeo" class="social" alt="Vimeo icon" />
+                </a>
+                <a href="" target="_blank" aria-label="LinkedIn icon">
+                    <Icon name="linkedin" class="social" alt="LinkedIn icon" />
+                </a>
             </div>
-          </div>
-        ))
-      }
-      <div class="socials">
-        <a href="" target="_blank" aria-label="Instagram icon">
-          <Icon name="inst" class="social" alt="Instagram icon" />
-        </a>
-        <a href="" target="_blank" aria-label="Vimeo icon">
-          <Icon name="vimeo" class="social" alt="Vimeo icon" />
-        </a>
-        <a href="" target="_blank" aria-label="LinkedIn icon">
-          <Icon name="linkedin" class="social" alt="LinkedIn icon" />
-        </a>
-      </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <style>
-  .wrapper {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(20, 20, 20, 1);
-    z-index: 99;
-  }
-
-  .container {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    position: relative;
-  }
-
-  .links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 130px;
-  }
-
-  .link {
-    text-align: center;
-    font-family: "ActayWide", sans-serif;
-    font-size: 56px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-  }
-  .link:hover .link-mask {
-    transform: translateX(50px);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .link a {
-    text-decoration: none;
-    display: inline-block;
-    color: #fff;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    padding: 20px 0;
-    transform: translateY(200px);
-  }
-  #menu-wrapper[data-visible="true"] .link a {
-    animation: slidein 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  }
-
-  .link .slash {
-    color: #593fbf;
-    margin-right: 10px;
-  }
-
-  .link-mask {
-    overflow: hidden;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  #menu-close {
-    border: none;
-    display: inline;
-    background: transparent;
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    left: 0;
-    cursor: pointer;
-    margin-top: 80px;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  #menu-close:hover {
-    transform: scale(1.3);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  #menu-close:active {
-    transform: scale(0.9);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  @keyframes slidein {
-    0% {
-      transform: translateY(200px);
+    .wrapper {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(20, 20, 20, 1);
+        z-index: 99;
     }
-    100% {
-      transform: translateY(0px);
+
+    .container {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        position: relative;
     }
-  }
 
-  #menu-wrapper {
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  #menu-wrapper[data-visible="false"] {
-    transform: translateY(-100%);
-  }
-
-  #menu-wrapper[data-visible="true"] {
-    transform: translateY(0);
-  }
-
-  .social {
-    width: 44px;
-    height: 44px;
-    margin-top: 30px;
-  }
-
-  .socials {
-    display: none;
-    gap: 38px;
-  }
-
-  @media screen and (max-width: 450px) {
-    .link {
-      font-size: 24px;
-    }
     .links {
-      margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 130px;
     }
-    .links a {
-      padding: 15px 0;
+
+    .link {
+        text-align: center;
+        font-family: "ActayWide", sans-serif;
+        font-size: 56px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
     }
-    .socials {
-      display: flex;
+    .link:hover .link-mask {
+        transform: translateX(50px);
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
+    .link a {
+        text-decoration: none;
+        display: inline-block;
+        color: #fff;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        padding: 20px 0;
+        transform: translateY(200px);
+    }
+    #menu-wrapper[data-visible="true"] .link a {
+        animation: slidein 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .link .slash {
+        color: #593fbf;
+        margin-right: 10px;
+    }
+
+    .link-mask {
+        overflow: hidden;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
     #menu-close {
-      margin-top: 20px;
-      margin-left: 5px;
+        border: none;
+        display: inline;
+        background: transparent;
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        left: 0;
+        cursor: pointer;
+        margin-top: 80px;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    #menu-close svg {
-      width: 32px;
-      height: 32px;
+
+    #menu-close:hover {
+        transform: scale(1.3);
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
-  }
+    #menu-close:active {
+        transform: scale(0.9);
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes slidein {
+        0% {
+            transform: translateY(200px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    #menu-wrapper {
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #menu-wrapper[data-visible="false"] {
+        transform: translateY(-100%);
+    }
+
+    #menu-wrapper[data-visible="true"] {
+        transform: translateY(0);
+    }
+
+    .social {
+        width: 44px;
+        height: 44px;
+        margin-top: 30px;
+    }
+
+    .socials {
+        display: none;
+        gap: 38px;
+    }
+
+    @media screen and (max-width: 450px) {
+        .link {
+            font-size: 24px;
+        }
+        .links {
+            margin-top: 80px;
+        }
+        .links a {
+            padding: 15px 0;
+        }
+        .socials {
+            display: flex;
+        }
+        #menu-close {
+            margin-top: 20px;
+            margin-left: 5px;
+        }
+        #menu-close svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
 </style>
 
 <script>
-  const closeIcon = document.querySelector("#menu-close");
-  const menuBtn = document.querySelector("#menu-btn");
+    const closeIcon = document.querySelector("#menu-close");
+    const menuBtn = document.querySelector("#menu-btn");
 
-  const handleMenuWrapperClick = () => {
-    const menu = document.querySelector("#menu-wrapper");
-    const isVisible =
-      menu?.getAttribute("data-visible") === "true" ? true : false;
-    console.log(isVisible);
-    menu?.setAttribute("data-visible", isVisible ? "false" : "true");
-  };
-  closeIcon?.addEventListener("click", handleMenuWrapperClick);
+    const handleMenuWrapperClick = () => {
+        const menu = document.querySelector("#menu-wrapper");
+        const isVisible =
+            menu?.getAttribute("data-visible") === "true" ? true : false;
+        console.log(isVisible);
+        menu?.setAttribute("data-visible", isVisible ? "false" : "true");
+    };
+    closeIcon?.addEventListener("click", handleMenuWrapperClick);
 
-  menuBtn?.addEventListener("click", handleMenuWrapperClick);
+    menuBtn?.addEventListener("click", handleMenuWrapperClick);
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const menu = document.querySelector(".menu");
-    const menuLinks = document.querySelectorAll(".link a");
+    document.addEventListener("DOMContentLoaded", function () {
+        const menu = document.querySelector(".menu");
+        const menuLinks = document.querySelectorAll(".link a");
 
-    menuLinks.forEach(function (link) {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute("href").substring(1); // Remove the # from the href
-        const targetSection = document.getElementById(targetId);
-        console.log("TargetID", targetId);
-        console.log("TargetSection", targetSection);
+        menuLinks.forEach(function (link) {
+            link.addEventListener("click", function (e) {
+                handleMenuWrapperClick();
+                // e.preventDefault();
+                // const targetId = this.getAttribute("href").substring(1); // Remove the # from the href
+                // const targetSection = document.getElementById(targetId);
+                // console.log("TargetID", targetId);
+                // console.log("TargetSection", targetSection);
 
-        handleMenuWrapperClick();
+                // handleMenuWrapperClick();
 
-        // Scroll to the target section smoothly
-        targetSection.scrollIntoView({ behavior: "smooth" });
-      });
+                // // Scroll to the target section smoothly
+                // targetSection.scrollIntoView({ behavior: "smooth" });
+            });
+        });
     });
-  });
 </script>
