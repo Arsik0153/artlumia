@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import contact from "../img/contact.png";
+---
+
+<div class="fluid">
+  <div class="container">
+    <Image src={contact} alt="Let's work on your project" />
+  </div>
+  <!-- Calendly inline widget begin -->
+  <div
+    class="calendly-inline-widget"
+    data-url="https://calendly.com/yerbol-artlumia/30min"
+    style="min-width:320px;height:700px;"
+  >
+  </div>
+  <script
+    type="text/javascript"
+    src="https://assets.calendly.com/assets/external/widget.js"
+    async></script>
+  <!-- Calendly inline widget end -->
+
+  <!-- Calendly badge widget begin -->
+  <link
+    href="https://assets.calendly.com/assets/external/widget.css"
+    rel="stylesheet"
+  />
+  <script
+    src="https://assets.calendly.com/assets/external/widget.js"
+    type="text/javascript"
+    async></script>
+  <script type="text/javascript">
+  window.onload = function () {
+    Calendly.initBadgeWidget({
+      url: "https://calendly.com/yerbol-artlumia/30min",
+      text: "Schedule time with me",
+      color: "#0069ff",
+      textColor: "#ffffff",
+      branding: true,
+    });
+  };
+  </script>
+  <!-- Calendly badge widget end -->
+</div>
+
+<style>
+  .fluid {
+    background-color: #000;
+    padding-bottom: 50px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+  }
+
+  @media screen and (max-width: 450px) {
+    img {
+      padding-bottom: 70px;
+    }
+  }
+</style>

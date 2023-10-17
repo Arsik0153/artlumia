@@ -6,54 +6,56 @@ import Projects from "../components/Projects.astro";
 
 import LandingLayout from "../layouts/LandingLayout.astro";
 import Slider from "../components/Slider.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <LandingLayout title="ARTLUMIA">
-    <Hero />
-    <Slider />
-    <Projects />
-    <Services />
-    <Stages />
+  <Hero />
+  <Slider />
+  <Projects />
+  <Services />
+  <Stages />
+  <Contact />
 </LandingLayout>
 
 <style>
-    h1 {
-        color: red;
-        font-family: "Poppins", sans-serif;
-    }
+  h1 {
+    color: red;
+    font-family: "Poppins", sans-serif;
+  }
 </style>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+  document.addEventListener("DOMContentLoaded", function () {
+    var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
-        if ("IntersectionObserver" in window) {
-            var lazyVideoObserver = new IntersectionObserver(function (
-                entries,
-                observer
-            ) {
-                entries.forEach(function (video) {
-                    if (video.isIntersecting) {
-                        for (var source in video.target.children) {
-                            var videoSource = video.target.children[source];
-                            if (
-                                typeof videoSource.tagName === "string" &&
-                                videoSource.tagName === "SOURCE"
-                            ) {
-                                videoSource.src = videoSource.dataset.src;
-                            }
-                        }
+    if ("IntersectionObserver" in window) {
+      var lazyVideoObserver = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(function (video) {
+          if (video.isIntersecting) {
+            for (var source in video.target.children) {
+              var videoSource = video.target.children[source];
+              if (
+                typeof videoSource.tagName === "string" &&
+                videoSource.tagName === "SOURCE"
+              ) {
+                videoSource.src = videoSource.dataset.src;
+              }
+            }
 
-                        video.target.load();
-                        video.target.classList.remove("lazy");
-                        lazyVideoObserver.unobserve(video.target);
-                    }
-                });
-            });
+            video.target.load();
+            video.target.classList.remove("lazy");
+            lazyVideoObserver.unobserve(video.target);
+          }
+        });
+      });
 
-            lazyVideos.forEach(function (lazyVideo) {
-                lazyVideoObserver.observe(lazyVideo);
-            });
-        }
-    });
+      lazyVideos.forEach(function (lazyVideo) {
+        lazyVideoObserver.observe(lazyVideo);
+      });
+    }
+  });
 </script>

@@ -1,112 +1,112 @@
+---
+import { Image } from "astro:assets";
+import appStem from "../img/slider/appstem.png";
+import giftPack from "../img/slider/giftpack.png";
+import moonly from "../img/slider/moonly.png";
+import magical from "../img/slider/magical.png";
+import kodezi from "../img/slider/kodezi.png";
+import jumper from "../img/slider/jumper.png";
+import automatio from "../img/slider/automatio.png";
+import colony from "../img/slider/colony.png";
+import forkChain from "../img/slider/forkchain.png";
+import monetizr from "../img/slider/monetizr.png";
+import superphone from "../img/slider/superphone.png";
+---
+
 <div class="slider-container">
-    <div id="my-keen-slider" class="keen-slider">
-        <div class="keen-slider__slide number-slide1">1</div>
-        <div class="keen-slider__slide number-slide2">2</div>
-        <div class="keen-slider__slide number-slide3">3</div>
-        <div class="keen-slider__slide number-slide4">4</div>
-        <div class="keen-slider__slide number-slide5">5</div>
-        <div class="keen-slider__slide number-slide6">6</div>
+  <div id="my-keen-slider" class="keen-slider">
+    <div class="keen-slider__slide number-slide2">
+      <Image src={giftPack} alt="GiftPack" />
     </div>
+    <div class="keen-slider__slide number-slide3">
+      <Image src={moonly} alt="Moonly" />
+    </div>
+    <div class="keen-slider__slide number-slide4">
+      <Image src={magical} alt="Magical" />
+    </div>
+    <div class="keen-slider__slide number-slide5">
+      <Image src={kodezi} alt="Kodezi" />
+    </div>
+    <div class="keen-slider__slide number-slide6">
+      <Image src={jumper} alt="Jumper" />
+    </div>
+    <div class="keen-slider__slide number-slide1">
+      <Image src={appStem} alt="AppStem" />
+    </div>
+    <div class="keen-slider__slide number-slide7">
+      <Image src={automatio} alt="Automatio" />
+    </div>
+    <div class="keen-slider__slide number-slide8">
+      <Image src={colony} alt="Colony" />
+    </div>
+    <div class="keen-slider__slide number-slide9">
+      <Image src={forkChain} alt="ForkChain" />
+    </div>
+    <div class="keen-slider__slide number-slide10">
+      <Image src={monetizr} alt="Monetizr" />
+    </div>
+    <div class="keen-slider__slide number-slide11">
+      <Image src={superphone} alt="Superphone" />
+    </div>
+  </div>
 </div>
 
 <style>
-    .slider-container {
-        height: 148px;
-        overflow: hidden;
-    }
+  .slider-container {
+    overflow: hidden;
+    background-color: #593fbf;
+  }
 
+  .keen-slider {
+    display: flex;
+    height: 148px;
+  }
+
+  .keen-slider__slide {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .keen-slider__slide img {
+    height: 85px;
+    object-fit: contain;
+  }
+
+  @media screen and (max-width: 450px) {
     .keen-slider {
-        display: flex;
+      display: flex;
+      height: 68px;
     }
-
-    [class^="number-slide"],
-    [class*=" number-slide"] {
-        background: grey;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 50px;
-        color: #fff;
-        font-weight: 500;
-        height: 200px;
-        max-height: 100vh;
+    .keen-slider__slide img {
+      height: 40px;
     }
-
-    .number-slide1 {
-        background: rgb(64, 175, 255);
-        background: linear-gradient(
-            128deg,
-            rgba(64, 175, 255, 1) 0%,
-            rgba(63, 97, 255, 1) 100%
-        );
+    .keen-slider__slide {
+      padding: 0;
+      max-width: 230px;
     }
-
-    .number-slide2 {
-        background: rgb(255, 75, 64);
-        background: linear-gradient(
-            128deg,
-            rgba(255, 154, 63, 1) 0%,
-            rgba(255, 75, 64, 1) 100%
-        );
-    }
-
-    .number-slide3 {
-        background: rgb(182, 255, 64);
-        background: linear-gradient(
-            128deg,
-            rgba(182, 255, 64, 1) 0%,
-            rgba(63, 255, 71, 1) 100%
-        );
-        background: linear-gradient(
-            128deg,
-            rgba(189, 255, 83, 1) 0%,
-            rgba(43, 250, 82, 1) 100%
-        );
-    }
-
-    .number-slide4 {
-        background: rgb(64, 255, 242);
-        background: linear-gradient(
-            128deg,
-            rgba(64, 255, 242, 1) 0%,
-            rgba(63, 188, 255, 1) 100%
-        );
-    }
-
-    .number-slide5 {
-        background: rgb(255, 64, 156);
-        background: linear-gradient(
-            128deg,
-            rgba(255, 64, 156, 1) 0%,
-            rgba(255, 63, 63, 1) 100%
-        );
-    }
-    .number-slide6 {
-        background: rgb(64, 76, 255);
-        background: linear-gradient(
-            128deg,
-            rgba(64, 76, 255, 1) 0%,
-            rgba(174, 63, 255, 1) 100%
-        );
-    }
+  }
 </style>
 
 <script>
-    import KeenSlider from "keen-slider";
-    var animation = { duration: 25000, easing: (t: any) => t };
+  import KeenSlider from "keen-slider";
+  var animation = { duration: 25000, easing: (t: any) => t };
 
-    var slider = new KeenSlider("#my-keen-slider", {
-        loop: true,
-        renderMode: "performance",
-        drag: false,
-        created(s) {
-            s.moveToIdx(5, true, animation);
-        },
-        updated(s) {
-            s.moveToIdx(s.track.details.abs + 5, true, animation);
-        },
-        animationEnded(s) {
-            s.moveToIdx(s.track.details.abs + 5, true, animation);
-        },
-    });
+  var slider = new KeenSlider("#my-keen-slider", {
+    loop: true,
+    renderMode: "performance",
+    drag: false,
+    slides: { perView: "auto" },
+    created(s) {
+      s.moveToIdx(5, true, animation);
+    },
+    updated(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
+    },
+    animationEnded(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
+    },
+  });
 </script>
