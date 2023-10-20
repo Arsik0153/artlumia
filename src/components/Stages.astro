@@ -67,15 +67,17 @@
     width: 100%;
     background: #07141e;
     color: white;
-    padding-top: 40px;
     font-family: ActayWide, sans-serif;
     background-image: url("../img/noise.png");
   }
 
   .fluid .container {
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    padding: 0 35px 0 35pz;
+    margin-right: auto;
+    margin-left: auto;
   }
   p {
     margin: 0;
@@ -202,7 +204,7 @@
   .underDiv {
     display: flex;
     gap: 11px;
-    margin-bottom: 50px;
+    margin-bottom: 130px;
   }
   .experience {
     border: 1px solid #fff;
@@ -285,7 +287,10 @@
     .underDiv {
       flex-direction: column;
       gap: 5px;
+      margin-bottom: 50px;
+
     }
+
     .experience {
       padding: 25px 55px 25px 25px;
     }
@@ -354,7 +359,7 @@
 
   @media screen and (min-width: 450px) and (max-width: 768px) {
     .fluid .container {
-      padding: 52px px 30px 53px 30px;
+      padding: 52px 30px 53px 30px;
       margin: 0 15px 0 15px;
       display: flex;
       flex-direction: column;
@@ -405,19 +410,30 @@
     }
     .p700-100 {
       font-size: 32px;
-      width: 209px;
       margin-bottom: 10px;
       margin-top: 90px;
     }
     .underDiv {
-      flex-direction: column;
-      gap: 5px;
+      display: flex;
+      gap: 11px;
+      margin-bottom: 60px;
     }
     .experience {
-      padding: 25px 55px 25px 25px;
+      border: 1px solid #fff;
+      padding: 15px 20px 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
     }
     .clients {
-      padding: 25px 28px 26px 26px;
+      /* border: 1px dashed #FFF; */
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='1' ry='1' stroke='white' stroke-width='2' stroke-dasharray='10%2c 10' stroke-dashoffset='7' stroke-linecap='square'/%3e%3c/svg%3e");
+      display: flex;
+      border-radius: 1px;
+      max-width: calc(100%-41.67%);
+      padding: 15px 33px 15px 33px;
+      align-items: center;
+      justify-content: flex-start;
     }
     .p700-24 {
       font-size: 14px;
@@ -435,23 +451,105 @@
     .p400-18 {
       font-size: 14px;
     }
+    .underDiv {
+      gap: 10px;
+      margin-bottom: 60px;
+    }
   }
   @media screen and (min-width: 768px) and (max-width: 992px) {
+    .container {
+      width: unset;
+      max-width: 750px;
+      margin: 0px 30px 0px 30px;
+      padding: 40px 35px 75px;
+    }
     .item1,
     .item2,
     .item3,
     .item4 {
-
       padding: 38px 39px 26px 0;
     }
-    .p700-64{
+    .item2 {
+      margin-left: 20px;
+    }
+    .p700-64 {
       font-size: 40px;
     }
-    .item1 .p700-64{
+    .p700-32 {
+      font-size: 24px;
+    }
+    .p400-18 {
+      font-size: 12px;
+    }
+    .item1 .p700-64 {
       margin-right: 30px;
     }
-    .p700-100{
+    .container .p700-100 {
       font-size: 60px;
+    }
+    .p700-24 {
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    .container {
+      width: unset;
+      max-width: 750px;
+      margin: 0px 30px 0px 30px;
+      padding: 40px 35px 75px;
+    }
+    .item1,
+    .item2,
+    .item3,
+    .item4 {
+      padding: 38px 39px 26px 0;
+    }
+    .item2 {
+      margin-left: 20px;
+    }
+    .p700-64 {
+      font-size: 40px;
+    }
+    .p700-32 {
+      font-size: 24px;
+    }
+    .p400-18 {
+      font-size: 12px;
+    }
+    .item1 .p700-64 {
+      margin-right: 30px;
+    }
+    .container .p700-100 {
+      font-size: 60px;
+    }
+    .p700-24 {
+      font-size: 18px;
+    }
+    .underDiv {
+      margin-bottom: 80px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .container {
+      width: auto;
+      max-width: 900px;
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+    .item1,
+    .item2,
+    .item3,
+    .item4 {
+      padding: 36px 50px 25px 0;
+    }
+    .p700-100 {
+      padding-bottom: 20px;
+      font-size: 80px;
+    }
+    .item1 .p700-64 {
+      margin-right: 34px;
     }
   }
 </style>
