@@ -45,9 +45,24 @@ const { title } = Astro.props;
             width: 288px;
         }
     } */
+            @media (min-width: 450px) {
+
+                .container {
+                    padding-right: 35px;
+                    padding-left: 35px;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
             @media (min-width: 768px) {
                 .container {
                     width: 750px;
+                }
+                .container {
+                    padding-right: 40px;
+                    padding-left: 40px;
+                    margin-right: auto;
+                    margin-left: auto;
                 }
             }
             @media (min-width: 992px) {

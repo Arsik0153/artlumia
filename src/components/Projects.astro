@@ -77,7 +77,7 @@ import eye from "../icons/eye.svg";
                     <p class="p700-52">Magical</p>
                     <div class="mr19">
                         <Image class="svg-eye" src={eye} alt="views: " />
-                        <p class="p700-52">610,000+</p>
+                        <p class="p700-52">61,000+</p>
                     </div>
                 </div>
             </div>
@@ -267,4 +267,40 @@ import eye from "../icons/eye.svg";
             aspect-ratio: 16 / 12;
         }
     }
+    @media screen and (min-width: 450px) and (max-width: 768px) {
+        .fluid {
+            padding-top: 10px;
+        }
+        .p700-100 {
+            font-size: 32px;
+            margin: 0 0 15px;
+        }
+        .p700-52 {
+            font-size: 14px;
+            margin: 18px 0 34px 0;
+        }
+        .p700-24 {
+            font-size: 14px;
+            margin: 4px 0 4px 0;
+        }
+        .svg-eye {
+            width: 14px;
+            height: 14px;
+        }
+        .project-box {
+            padding-top: 70px;
+            padding-bottom: 0;
+        }
+        .grid-container {
+            gap: 4px;
+        }
+        .gif {
+            object-fit: cover;
+            width: 100%;
+            aspect-ratio: 16 / 12;
+        }   
+    }
+    /* @media screen and (max-width: 450px) {
+        
+    } */
 </style>
