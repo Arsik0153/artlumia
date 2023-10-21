@@ -77,7 +77,7 @@ import eye from "../icons/eye.svg";
                     <p class="p700-52">Magical</p>
                     <div class="mr19">
                         <Image class="svg-eye" src={eye} alt="views: " />
-                        <p class="p700-52">610,000+</p>
+                        <p class="p700-52">61,000+</p>
                     </div>
                 </div>
             </div>
@@ -171,8 +171,8 @@ import eye from "../icons/eye.svg";
     .project-box {
         display: flex;
         flex-direction: column;
-        padding-top: 90px;
         align-items: center;
+        padding-top: 100px;
         padding-bottom: 100px;
     }
     .views-box {
@@ -197,6 +197,9 @@ import eye from "../icons/eye.svg";
         width: 100%;
         aspect-ratio: 16 / 9;
     }
+    .client .gif {
+        aspect-ratio: 16 / 9;
+    }
 
     .p700-52 {
         color: #fff;
@@ -217,7 +220,11 @@ import eye from "../icons/eye.svg";
     .mr19 {
         display: flex;
         gap: 19px;
-        align-items: baseline;
+    }
+    .svg-eye {
+        margin-top: 35px;
+        width: 38px;
+        height: 38px;
     }
     .grid-container {
         display: grid;
@@ -237,6 +244,7 @@ import eye from "../icons/eye.svg";
     @media screen and (max-width: 450px) {
         .fluid {
             padding-top: 10px;
+            padding-bottom: 50px;
         }
         .p700-100 {
             font-size: 32px;
@@ -251,8 +259,12 @@ import eye from "../icons/eye.svg";
             margin: 4px 0 4px 0;
         }
         .svg-eye {
+            margin-top: 18px;
             width: 14px;
             height: 14px;
+        }
+        .mr19 {
+            gap: 6px;
         }
         .project-box {
             padding-top: 70px;
@@ -264,7 +276,126 @@ import eye from "../icons/eye.svg";
         .gif {
             object-fit: cover;
             width: 100%;
-            aspect-ratio: 16 / 12;
+        }
+    }
+    @media screen and (min-width: 450px) and (max-width: 768px) {
+        .fluid {
+            padding-top: 10px;
+        }
+        .p700-100 {
+            font-size: 32px;
+            margin: 0 0 15px;
+        }
+        .p700-52 {
+            font-size: 14px;
+            margin: 18px 0 34px 0;
+        }
+        .p700-24 {
+            font-size: 14px;
+            margin: 14px 0 4px 0;
+        }
+        .svg-eye {
+            width: 24px;
+            height: 24px;
+            margin-top: 20px;
+        }
+        .mr19 {
+            gap: 10px;
+        }
+        .project-box {
+            padding-top: 70px;
+            padding-bottom: 0;
+        }
+        .grid-container {
+            margin-top: 30px;
+            gap: 4px;
+        }
+        .gif {
+            object-fit: cover;
+            width: 100%;
+        }
+        .p700-52 {
+            font-size: 26px;
+        }
+        .p700-100 {
+            font-size: 50px;
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        .fluid {
+            display: flex;
+            justify-content: center;
+        }
+        .project-box {
+            padding-top: 70px;
+            padding-bottom: 0;
+        }
+        .container {
+            width: unset;
+            max-width: 750px;
+            margin: 0px 30px 0px 30px;
+            padding: 0px 35px 0px;
+        }
+        .svg-eye {
+            width: 30px;
+            height: 30px;
+            margin-top: 32px;
+        }
+        .mr19 {
+            gap: 10px;
+        }
+        .p700-100 {
+            font-size: 60px;
+        }
+        .p700-52 {
+            font-size: 30px;
+        }
+    }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+        .fluid {
+            display: flex;
+            justify-content: center;
+        }
+        .project-box {
+            padding-top: 70px;
+            padding-bottom: 0;
+        }
+        .container {
+            width: auto;
+            max-width: 750px;
+            margin: 11px 30px 0px 30px;
+            padding: 0px 35px 0px;
+        }
+        .p700-100 {
+            font-size: 60px;
+        }
+        .p700-52 {
+            font-size: 38px;
+        }
+        .svg-eye{
+            margin-top: 32px;
+        }
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1500px) {
+        .fluid {
+            display: flex;
+            justify-content: center;
+        }
+        .project-box {
+            padding-top: 70px;
+            padding-bottom: 0;
+        }
+        .container {
+            width: auto;
+            max-width: 900px;
+            margin-right: 70px;
+            margin-left: 70px;
+        }
+        .p700-52 {
+            font-size: 44px;
+        }
+        .p700-100 {
+            font-size: 90px;
         }
     }
 </style>
