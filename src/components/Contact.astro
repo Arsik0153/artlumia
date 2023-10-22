@@ -29,11 +29,11 @@ import contact from "../img/contact.png";
         src="https://assets.calendly.com/assets/external/widget.js"
         type="text/javascript"
         async></script>
-    <script type="text/javascript">
+    <script class="Cwidget" type="text/javascript">
         window.onload = function () {
             Calendly.initBadgeWidget({
                 url: "https://calendly.com/yerbol-artlumia/30min",
-                text: "Schedule time with me",
+                text: "Schedule time with us",
                 color: "#0069ff",
                 textColor: "#ffffff",
                 branding: true,
@@ -53,6 +53,9 @@ import contact from "../img/contact.png";
         height: auto;
         padding-top: 80px;
     }
+    .Cwidget{
+        padding-right: 35px;
+    }
 
     @media screen and (max-width: 450px) {
         img {
@@ -61,5 +64,32 @@ import contact from "../img/contact.png";
         .calendly-inline-widget {
             height: 450px !important;
         }
+
     }
+    @media screen and (min-width: 450px) and (max-width: 770px) {
+        img {
+            padding-bottom: 70px;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+    .container {
+      width: auto;
+      max-width: 750px;
+    }
+
+  }
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    .container {
+      width: auto;
+      max-width: 750px;
+    }
+
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .container {
+      width: auto;
+      max-width: 900px;
+    }
+  }
 </style>
