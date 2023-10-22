@@ -8,7 +8,7 @@ import Menu from "./Menu.astro";
 <Menu />
 <div class="fluid">
     <div class="container">
-        <header>
+        <header class="header">
             <div class="left">
                 <button type="button" class="menu-btn" id="menu-btn"
                     >Menu</button
@@ -24,7 +24,10 @@ import Menu from "./Menu.astro";
                 <a href="https://vimeo.com/artlumia" target="_blank">
                     <Icon name="vimeo" class="social" />
                 </a>
-                <a href="https://www.linkedin.com/company/artlumia/" target="_blank">
+                <a
+                    href="https://www.linkedin.com/company/artlumia/"
+                    target="_blank"
+                >
                     <Icon name="linkedin" class="social" />
                 </a>
             </div>
@@ -161,7 +164,7 @@ import Menu from "./Menu.astro";
         width: 100%;
         display: grid;
         grid-template-columns: 70% 1fr;
-        margin-bottom: 200px;
+        margin-bottom: 22vh;
     }
 
     .content .line {
@@ -243,14 +246,47 @@ import Menu from "./Menu.astro";
                   |_|
 */
 
+    /* @media screen and (max-width: 992px) screen and (orientation: landscape)  {
+        .content {
+            grid-template-columns: 1fr;
+            margin-bottom: 50px;
+        }
+        .header {
+            margin-bottom: 0;
+        }
+        .title {
+            max-width: 500px;
+        }
+        .order {
+            width: 130px;
+            height: 130px;
+            margin-top: -30px;
+        }
+        .content .line {
+            max-width: 174px;
+        }
+        .hero-title {
+            display: block;
+        }
+        .hero-title-sm {
+            display: none;
+        }
+        header .right {
+            display: none;
+        }
+        header {
+            flex-direction: row-reverse;
+        }
+    } */
     @media screen and (max-width: 450px) {
         .content {
             grid-template-columns: 1fr;
-            margin-bottom: 100px;
+            margin-bottom: 20vh;
         }
         .order {
-            width: 146px;
-            height: 146px;
+            width: 170px;
+            height: 170px;
+            margin-top: -20px;
         }
         .content .line {
             max-width: 174px;
@@ -268,7 +304,11 @@ import Menu from "./Menu.astro";
             flex-direction: row-reverse;
         }
     }
+
     @media screen and (min-width: 450px) and (max-width: 770px) {
+        .header {
+            margin-bottom: 200px;
+        }
         .container {
             width: auto;
             max-width: 750px;
@@ -277,11 +317,12 @@ import Menu from "./Menu.astro";
         }
         .content {
             grid-template-columns: 1fr;
-            margin-bottom: 150px;
+            margin-bottom: 170px;
         }
         .order {
-            width: 146px;
-            height: 146px;
+            width: 180px;
+            height: 180px;
+            margin-top: -30px;
         }
         .content .line {
             max-width: 174px;
@@ -321,12 +362,11 @@ import Menu from "./Menu.astro";
         } */
     }
     @media screen and (min-width: 1200px) and (max-width: 1500px) {
-    .container {
-      width: auto;
-      max-width: 900px;
-
+        .container {
+            width: auto;
+            max-width: 900px;
+        }
     }
-  }
 </style>
 
 <script>
@@ -338,6 +378,7 @@ import Menu from "./Menu.astro";
         console.log("targetSection", targetSection);
 
         // Scroll to the target section smoothly
-        targetSection?.scrollIntoView({ behavior: "smooth" });
+        targetSection?.scrollIntoView();
+        //тута я просто { behavior: "smooth" } удалил  ^
     });
 </script>
