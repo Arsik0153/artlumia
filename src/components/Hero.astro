@@ -18,13 +18,13 @@ import Menu from "./Menu.astro";
                 <Image src={logo} alt="ARTLUMIA" />
             </div>
             <div class="right">
-                <a href="" target="_blank">
+                <a href="https://instagram.com/artlumia.xyz/" target="_blank">
                     <Icon name="inst" class="social" />
                 </a>
-                <a href="" target="_blank">
+                <a href="https://vimeo.com/artlumia" target="_blank">
                     <Icon name="vimeo" class="social" />
                 </a>
-                <a href="" target="_blank">
+                <a href="https://www.linkedin.com/company/artlumia/" target="_blank">
                     <Icon name="linkedin" class="social" />
                 </a>
             </div>
@@ -70,7 +70,7 @@ import Menu from "./Menu.astro";
     }
 
     .fluid .container {
-        min-height: calc(100vh - 188px);
+        height: calc(100vh);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -161,7 +161,7 @@ import Menu from "./Menu.astro";
         width: 100%;
         display: grid;
         grid-template-columns: 70% 1fr;
-        margin-bottom: 137px;
+        margin-bottom: 200px;
     }
 
     .content .line {
@@ -234,10 +234,19 @@ import Menu from "./Menu.astro";
         display: none;
     }
 
+    /*
+           _             _   _
+  __ _  __| | __ _ _ __ | |_(_)_   _____
+ / _` |/ _` |/ _` | '_ \| __| \ \ / / _ \
+| (_| | (_| | (_| | |_) | |_| |\ V /  __/
+ \__,_|\__,_|\__,_| .__/ \__|_| \_/ \___|
+                  |_|
+*/
+
     @media screen and (max-width: 450px) {
         .content {
             grid-template-columns: 1fr;
-            margin-bottom: 25px;
+            margin-bottom: 100px;
         }
         .order {
             width: 146px;
@@ -259,6 +268,65 @@ import Menu from "./Menu.astro";
             flex-direction: row-reverse;
         }
     }
+    @media screen and (min-width: 450px) and (max-width: 770px) {
+        .container {
+            width: auto;
+            max-width: 750px;
+
+            padding: 0px 35px 0px;
+        }
+        .content {
+            grid-template-columns: 1fr;
+            margin-bottom: 150px;
+        }
+        .order {
+            width: 146px;
+            height: 146px;
+        }
+        .content .line {
+            max-width: 174px;
+        }
+        .hero-title {
+            display: none;
+        }
+        .hero-title-sm {
+            display: block;
+            max-width: 70vw;
+            width: 80%;
+        }
+        header .right {
+            display: none;
+        }
+        header {
+            flex-direction: row-reverse;
+        }
+    }
+    @media screen and (min-width: 770px) and (max-width: 992px) {
+        .container {
+            width: unset;
+            max-width: 750px;
+
+            padding: 0px 35px 0px;
+        }
+    }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+        .container {
+            width: 100%;
+            max-width: 750px;
+
+            padding: 0px 80px 0px;
+        }
+        /* .order{
+            width: 180px;
+        } */
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .container {
+      width: auto;
+      max-width: 900px;
+
+    }
+  }
 </style>
 
 <script>
