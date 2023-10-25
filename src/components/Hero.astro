@@ -24,7 +24,10 @@ import Menu from "./Menu.astro";
                 <a href="https://vimeo.com/artlumia" target="_blank">
                     <Icon name="vimeo" class="social" />
                 </a>
-                <a href="https://www.linkedin.com/company/artlumia/" target="_blank">
+                <a
+                    href="https://www.linkedin.com/company/artlumia/"
+                    target="_blank"
+                >
                     <Icon name="linkedin" class="social" />
                 </a>
             </div>
@@ -321,12 +324,11 @@ import Menu from "./Menu.astro";
         } */
     }
     @media screen and (min-width: 1200px) and (max-width: 1500px) {
-    .container {
-      width: auto;
-      max-width: 900px;
-
+        .container {
+            width: auto;
+            max-width: 900px;
+        }
     }
-  }
 </style>
 
 <script>
@@ -338,6 +340,6 @@ import Menu from "./Menu.astro";
         console.log("targetSection", targetSection);
 
         // Scroll to the target section smoothly
-        targetSection?.scrollIntoView({ behavior: "smooth" });
+        targetSection?.scrollIntoView();
     });
 </script>
