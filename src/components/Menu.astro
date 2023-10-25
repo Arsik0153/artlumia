@@ -68,7 +68,7 @@ const links = [
         top: 0;
         left: 0;
         background: rgba(20, 20, 20, 1);
-        z-index: 99;
+        z-index: 9999;
     }
 
     .container {
@@ -203,6 +203,34 @@ const links = [
         }
         .links {
             margin-top: 80px;
+        }
+        .links a {
+            padding: 15px 0;
+        }
+        .socials {
+            display: flex;
+        }
+        #menu-close {
+            margin-top: 20px;
+            margin-left: 5px;
+        }
+        #menu-close svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 767px) and (orientation: landscape) {
+        #menu-wrapper[data-visible="false"] {
+            transform: translateY(-140%);
+        }
+
+        .links {
+            margin-top: 30px;
+        }
+
+        .link {
+            font-size: 24px;
         }
         .links a {
             padding: 15px 0;

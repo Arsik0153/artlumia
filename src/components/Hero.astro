@@ -329,6 +329,41 @@ import Menu from "./Menu.astro";
             max-width: 900px;
         }
     }
+
+    @media only screen and (max-width: 767px) and (orientation: landscape) {
+        .container {
+            width: auto;
+            max-width: 750px;
+
+            padding: 0px 35px 0px;
+        }
+        .content {
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 150px;
+            align-items: center;
+        }
+        .order {
+            width: 146px;
+            height: 146px;
+        }
+        .content .line {
+            max-width: 174px;
+        }
+        .hero-title {
+            display: none;
+        }
+        .hero-title-sm {
+            display: block;
+            max-width: 70vw;
+            width: 100%;
+        }
+        header .right {
+            display: none;
+        }
+        header {
+            flex-direction: row-reverse;
+        }
+    }
 </style>
 
 <script>
