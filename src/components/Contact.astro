@@ -7,6 +7,11 @@ import contact from "../img/contact.png";
     <div class="container">
         <Image src={contact} alt="Let's work on your project" />
         <p class="p400-24">Schedule a call with us below!</p>
+        <p class="p400-18">
+            Or send your email to <a href="mailto:yerbol@artlumia.xyz"
+                >yerbol@artlumia.xyz</a
+            >
+        </p>
     </div>
     <!-- Calendly inline widget begin -->
     <div
@@ -31,15 +36,15 @@ import contact from "../img/contact.png";
         type="text/javascript"
         async></script>
     <script class="Cwidget" type="text/javascript">
-    window.onload = function () {
-        Calendly.initBadgeWidget({
-            url: "https://calendly.com/yerbol-artlumia/30min",
-            text: "Schedule time with us",
-            color: "#0069ff",
-            textColor: "#ffffff",
-            branding: true,
-        });
-    };
+        window.onload = function () {
+            Calendly.initBadgeWidget({
+                url: "https://calendly.com/yerbol-artlumia/30min",
+                text: "Schedule time with us",
+                color: "#0069ff",
+                textColor: "#ffffff",
+                branding: true,
+            });
+        };
     </script>
     <!-- Calendly badge widget end -->
 </div>
@@ -50,7 +55,6 @@ import contact from "../img/contact.png";
         padding-bottom: 50px;
     }
     .container {
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -59,7 +63,6 @@ import contact from "../img/contact.png";
     img {
         width: 100%;
         height: auto;
-
     }
     .Cwidget {
         padding-right: 35px;
@@ -73,6 +76,21 @@ import contact from "../img/contact.png";
         line-height: 110%;
         text-transform: uppercase;
         margin-bottom: 0;
+    }
+    .p400-18 {
+        align-items: center;
+        color: #fff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        text-align: center;
+
+        a {
+            color: #fff;
+        }
     }
     @media screen and (max-width: 450px) {
         .container {

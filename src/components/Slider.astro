@@ -10,6 +10,7 @@ import automatio from "../img/slider/automatio.png";
 import colony from "../img/slider/colony.png";
 import monetizr from "../img/slider/monetizr.png";
 import superphone from "../img/slider/superphone.png";
+import hyundai from "../img/slider/hyundai.png";
 ---
 
 <div class="slider-container">
@@ -43,6 +44,9 @@ import superphone from "../img/slider/superphone.png";
         </div>
         <div class="keen-slider__slide number-slide11">
             <Image src={superphone} alt="Superphone" />
+        </div>
+        <div class="keen-slider__slide number-slide11">
+            <Image src={hyundai} alt="Hyundai" />
         </div>
     </div>
 </div>
@@ -89,7 +93,7 @@ import superphone from "../img/slider/superphone.png";
 
 <script>
     import KeenSlider from "keen-slider";
-    var animation = { duration: 25000, easing: (t: any) => t };
+    var animation = { duration: 2500, easing: (t: any) => t };
 
     var slider = new KeenSlider("#my-keen-slider", {
         loop: true,
