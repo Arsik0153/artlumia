@@ -24,6 +24,9 @@ import hyundai from "../img/slider/hyundai.png";
         <div class="keen-slider__slide number-slide4">
             <Image src={magical} alt="Magical" />
         </div>
+        <div class="keen-slider__slide number-slide11">
+            <Image src={hyundai} alt="Hyundai" />
+        </div>
         <div class="keen-slider__slide number-slide5">
             <Image src={kodezi} alt="Kodezi" />
         </div>
@@ -44,9 +47,6 @@ import hyundai from "../img/slider/hyundai.png";
         </div>
         <div class="keen-slider__slide number-slide11">
             <Image src={superphone} alt="Superphone" />
-        </div>
-        <div class="keen-slider__slide number-slide11">
-            <Image src={hyundai} alt="Hyundai" />
         </div>
     </div>
 </div>
@@ -93,7 +93,7 @@ import hyundai from "../img/slider/hyundai.png";
 
 <script>
     import KeenSlider from "keen-slider";
-    var animation = { duration: 2500, easing: (t: any) => t };
+    var animation = { duration: 20000, easing: (t: any) => t };
 
     var slider = new KeenSlider("#my-keen-slider", {
         loop: true,
